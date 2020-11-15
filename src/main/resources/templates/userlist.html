@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista użytkowników</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
+</head>
+<body>
+    <table class="regular-table">
+        <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Data wprowadzenia</th>
+        </tr>
+        </thead>
+        <tbody class="regular-table">
+        <tr th:each="user : ${allUsers}">
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.surname}"></td>
+            <td th:text="${user.creationDate}"></td>
+            <form th:action="@{/modifyUser/{id}(id=${user.id})}" method="get" th:object="${user.id}">
+                <td>
+                    <input type="hidden" name="id" th:value="${user.id}"/>
+                    <button class="btn btn-success" value="Update">Popraw</button>
+                </td>
+            </form>
+            <form action="/deleteUser" method="post" th:object="${user}">
+                <td>
+                    <input type="hidden" name="name" th:value="${user.name}">
+                    <input type="hidden" name="surname" th:value="${user.surname}">
+                    <button class="btn btn-success" value="Remove">Usuń</button>
+                </td>
+            </form>
+
+        </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>

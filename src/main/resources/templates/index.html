@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+        lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Witamy w sklepie internetowym</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<link type="text/css" rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+
+<body>
+    <h1>Witamy w sklepie internetowym</h1>
+    <form action="/users">
+        <button class="btn btn-success" value="Przeglądaj użytkowaników">Szukaj</button>
+    </form>
+    <form action="/add">
+        <button class="btn btn-primary" type="submit">Dodaj użytkownika</button>
+    </form>
+    <form action="/find">
+        <button class="btn btn-warning" value="Szukaj produktu">Szukaj produktu</button>
+    </form>
+</body>
+</html>
