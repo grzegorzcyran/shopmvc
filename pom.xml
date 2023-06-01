@@ -11,9 +11,9 @@
 	</parent>
 
 	<groupId>com.grcy</groupId>
-	<artifactId>shop-mvc</artifactId>
+	<artifactId>shopmvc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>shop-mvc</name>
+	<name>shopmvc</name>
 	<description>Shop based on spring boot and MVC</description>
 
 	<properties>
