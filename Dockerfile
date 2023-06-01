@@ -1,5 +1,5 @@
 #1. zaciągnięcie obrazu bazowego
-FROM openjdk:11-alpine
+FROM openjdk:11
 
 #2. wkopiowanie własnego pliku jar
 COPY /target/shopmvc*.jar shopmvc.jar
